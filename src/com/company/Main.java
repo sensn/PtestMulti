@@ -25,6 +25,8 @@ public class Main extends PApplet{
         //   background(64);
         //ellipse(mouseX, mouseY, 20, 20);
 
+
+
         // Draw only when mouse is pressed
         if (mousePressed == true) {
             angle += 5;
@@ -48,7 +50,7 @@ public class Main extends PApplet{
     public static void main(String[] args) {
 	// write your code here
         //String[] appletArgs = new String[] { "Main" };
-        String[] processingArgs = {"Main","199","299","599"};
+        String[] processingArgs = {"Main"};
         Main mySketch = new Main();
 
 
