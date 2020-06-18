@@ -1,5 +1,6 @@
 package com.company;
 
+import controlP5.ControlP5;
 import processing.core.PApplet;
 
 class ProjectorSketch extends PApplet {
@@ -10,6 +11,7 @@ class ProjectorSketch extends PApplet {
 
         println("Inner's sketchPath: \t\"" + sketchPath("") + "\"");
         println("Inner's dataPath: \t\"" + dataPath("") + "\"\n");
+
     }
 
     public void setup() {
@@ -18,6 +20,7 @@ class ProjectorSketch extends PApplet {
         frameRate(1);
         // stroke(#FFFF00);
         strokeWeight(5);
+     //   this.getSurface().setVisible(true);   //set window visible
     }
 
     public void draw() {

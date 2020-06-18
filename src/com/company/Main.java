@@ -1,5 +1,6 @@
 package com.company;
 
+import controlP5.ControlP5;
 import processing.core.PApplet;   //Download processing add
 import processing.core.PSurface;
 
@@ -9,6 +10,8 @@ public class Main extends PApplet{
     private PApplet sketch;
 
     ProjectorSketch projector;
+    ControlP5 cp5;
+    public float boxValue = 23;
 
     //Size for main
     int w=1280; //non fullscreen width
@@ -23,6 +26,9 @@ public class Main extends PApplet{
 
         println("Main's  sketchPath: \t\"" + sketchPath("") + "\"");
         println("Main's  dataPath: \t\"" + dataPath("") + "\"\n");
+
+
+     //  projector = new ProjectorSketch(this);
     }
 
    public void setup() {
@@ -31,13 +37,14 @@ public class Main extends PApplet{
         stroke(-1);
         strokeWeight((float) 1.5);
        surface.setResizable(true);
-
+       cp5 = new ControlP5(this);
         runSketch( new String[] {
                         "--display=1",
                         "--location=" + (displayWidth>>2) + ',' + (displayHeight>>3),
                         "--sketch-path=" + sketchPath(""),
                         "" }
                 , projector = new ProjectorSketch() );
+        //projector.getSurface().setVisible(false);   //set window visible
     }
 
    public void draw() {
